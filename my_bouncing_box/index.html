@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      id="my_bouncing_box"
+      style="
+        background-color: blue;
+        border-radius: 3px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        min-width: 100px;
+        min-height: 100px;
+        text-align: center;
+        font-weight: bold;
+        color: #999;
+      "
+    >
+    bustlezach001@gmail.com
+    </div>
+    <script type="text/javascript">
+      const box = document.getElementById("my_bouncing_box");
+    
+
+      let xSpeed = 20;
+      let ySpeed = 20;
+      let xAxis = 0;
+      let yAxis = 0;
+
+      const boxHeight = box.offsetHeight;
+      const boxWidth = box.offsetWidth;
+      
+
+      // screen dimension
+      const winHeight = window.innerHeight - boxHeight;
+      const winWidth = window.innerWidth - boxWidth;
+
+      setInterval(function moveBall() {
+        if (xAxis > winWidth || xAxis < 0) {
+          xSpeed *= -1;
+        }
+        if (yAxis > winHeight || yAxis < 0) {
+          ySpeed *= -1;
+        }
+
+        xAxis += xSpeed;
+        yAxis += ySpeed;
+        box.style.left = xAxis + "px";
+        box.style.top = yAxis + "px";
+      }, 400);
+    </script>
+  </body>
+</html>

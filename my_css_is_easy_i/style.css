@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+}
+
+.container {
+  display: flexbox;
+  flex-wrap: wrap;
+  text-align: center;
+  height: 100vh;
+}
+.sub {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+}
+
+.header {
+  background-color: #00b7eb;
+  min-height: 20vh;
+}
+
+.hero {
+  background-color: #ff0000;
+  min-height: 20vh;
+}
+
+.content {
+  background-color: #00ff00;
+  flex-basis: 50%;
+  min-height: 20vh;
+}
+
+.sidebar {
+  background-color: #800080;
+  flex-basis: 50%;
+  min-height: 20vh;
+}
+
+.footer {
+  background-color: #444444;
+  min-height: 20vh;
+}
+@media (max-width: 650px) {
+  .sub {
+    flex-direction: column;
+    height: 40vh;
+  }
+}
