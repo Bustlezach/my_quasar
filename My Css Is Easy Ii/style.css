@@ -1,0 +1,16 @@
+body,
+html {
+  height: 100%;
+}
+
+
+h1, h2, h3{text-align: center; line-height: 10;}
+
+
+#head{background-color: #FFB84c;}
+
+#main{background-color: #B0DAFF; }
+
+#sidebar{background-color: #FFB4B4; }
+
+#foot{background-color: #7AA874; }
